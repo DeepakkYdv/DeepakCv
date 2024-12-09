@@ -1,0 +1,455 @@
+@font-face {
+  font-family: font1;
+  src: url(fonts/font5.woff2);
+}
+@font-face {
+  font-family: font2;
+  src: url(fonts/font4.woff2);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  min-height: 100%;
+  background-color: rgb(238, 236, 236);;
+}
+#page1 {
+  overflow: hidden;
+  width: auto;
+  height: 140vh;
+  background-color: white;
+  border-radius: 0 0 7em 7em;
+}
+#page1 #wrap {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(238, 236, 236);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 7em 7em;
+}
+#nav{
+  font-family: font1;
+  width: 100%;
+  font-size:small;
+  padding-top: 3em;
+  padding-left: 5em;
+  padding-right: 5em;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#iconSocial,.mobile{
+  display: none;
+}
+#nav .part1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row ;
+  gap: 1em;
+}
+.part1 .sbtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6vw;
+  height:3vw;
+  border-radius: 5em;
+  background-color: white;
+}
+.part1 a:nth-child(1)
+{
+  font-family: font2;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+#nav .part2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row ;
+  gap: 0.5em;
+}
+.part2 a{
+  font-family: font2;
+}
+#profilePic{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10vw;
+  height: 20vh;
+  border-radius: 50%;
+  background-color: rgb(100, 73, 73);
+}
+#profile{
+  font-family: font1;
+  font-size: 1.7em;
+  padding-top: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#profilePic{ 
+  position: relative;
+  border: 2px solid white;
+  background-image: url(profilepic.jpg);
+  background-size: cover;
+  background-position-y:70%;
+}
+#profilePic #name{
+  font-family: font2;
+  color: rgb(61, 61, 61);
+  position: absolute;
+  transform: rotateZ(-10deg);
+  width: 8vw;
+  height: 6vh;
+  text-align: center;
+  padding-top: 9%;
+  border-radius: 5em;
+  left: 80%;
+  font-size: 0.5em;
+  background-color: white;
+  animation: upDown 6s infinite ease-in-out;
+}
+@keyframes upDown{
+  0%{top: 20px;}
+  50%{top:60px;}
+  100%{top:20px;}
+}
+#heading{
+  text-align: center;
+  letter-spacing:2px;
+  padding-top: 1em;
+  padding-bottom: 1.7em;
+}
+/* master css */
+
+.backgroundIng{
+  background:linear-gradient(to right,black,grey);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* {master css } */
+
+
+#profile #btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:5em;
+  width: 12vw;
+  height:8vh;
+  color: white;
+  background-color: rgb(23, 23, 26);
+}
+#btn p{
+  font-size: 0.5em;
+  font-family: font2;
+}
+#btn i{
+  font-size: 0.7em;
+  font-family: font2;
+  padding-left: 0.4em;
+}
+
+#motion-container{
+  width: auto;
+  white-space: nowrap;
+}
+
+.motion
+{ 
+  white-space: nowrap;
+  margin-top: 15vh;
+  gap: 6em;
+  width:400%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: motions 70s linear infinite;
+}
+@keyframes motions {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-100%);}
+}
+
+.motion img{
+  width: 10vw;
+  height: auto;
+}
+.motion:hover{
+  animation-play-state: paused;
+  transition: 0.25s ease-in-out;
+}
+/* page2 */
+
+#page2{
+  width: 100%;
+  height: 110vh;
+  font-family: font1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#page2 p{
+  text-align: center;
+  font-size: 3em;
+  color: rgb(255, 254, 254);
+}
+#ppart1 h1{
+  text-align: center;
+  font-size: 2.3em;
+  padding: 1.5em;
+}
+#ppart2{
+  border-top: 1px dotted rgb(132, 132, 132);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#ppart2 p {
+  margin-top: -1.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateZ(-10deg);
+  width: 8vw;
+  height: 6vh;
+  font-size:0.9em;
+  background-color: rgb(255, 253, 253);
+  border-radius: 5em;
+  color: black;
+}
+#ppart2 #projectss{
+  width: 100%;
+  padding-top: 2em ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#projectss .prj1{
+   width: 15vw;
+   height: 40vh;
+   /* background-image: url(profilepic.jpg); */
+   background-position: bottom;
+   background-size: cover;
+   border-radius: 2em;
+}
+
+.prj1:nth-child(1)
+{
+  background-image: url("https://images.unsplash.com/photo-1709570964019-45f7de26de25?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+transform-style: preserve-3d;
+transition: transform 0.5s;
+transform: rotateX(20deg) rotateY(-50deg) ;
+}
+.prj1:nth-child(2)
+{
+  background-image: url("https://assets-global.website-files.com/61defec4a021d8fe954c11bd/6398c34ee464613a189e748c_Hero-bg-mango.png");
+transform-style: preserve-3d;
+transition: transform 0.5s;
+transform: rotateX(-20deg) rotateY(-50deg) ;
+}
+.prj1:nth-child(3)
+{
+  margin-top: 5em;
+  background-image: url(profilepic.jpg);
+}
+.prj1:nth-child(4)
+{
+  background-image: url("https://kaushal8582.github.io/college-buddy/img/college-buddy-logo-02.svg");
+transform-style: preserve-3d;
+transition: transform 0.5s;
+transform: rotateX(20deg) rotateY(-50deg) ;
+}
+.prj1:nth-child(5)
+{
+  background-image: url(profilepic.jpg);
+transform-style: preserve-3d;
+transition: transform 0.5s;
+transform: rotateX(-20deg) rotateY(-50deg) ;
+}
+
+/* Page3 */
+
+#page3{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 254, 254);
+  border-radius: 7em 7em 0 0 ;
+}
+#page3 h1{
+  padding-top: 1.5em;
+text-align: center;
+font-family: font1;
+}
+#page3 #btn{
+ display: flex;
+ gap: 5em;
+ padding-top: 2em;
+}
+
+#btn .sbtn{
+  font-family:font1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  width: 8vw;
+  height:4vw;
+  border-radius: 5em;
+  font-size: 1.8em;
+  border: 4px solid rgb(235, 233, 233);
+}
+#btn .sbtn:nth-child(1)
+{
+  background-color: rgb(23, 23, 26);
+  color: rgb(255, 254, 254);
+}
+
+.part11{
+  display: none;
+}
+/* Responsiveness starte here */
+/* Styles for mobile devices */
+@media (max-width: 700px) {
+  .desktop{
+    display: none;
+  }
+  #mobile{
+    display: block;
+  }
+  #nav .part1{
+   display: none;
+  }
+  #nav .part11{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row ;
+  gap: 1em;
+  }
+  .part11 .sbtn{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    width: 18vw;
+    height:9vw;
+    border-radius: 5em;
+    background-color: rgb(255, 254, 254);
+  }
+  .part11 .sbtn:nth-child(1){
+    background-color: rgb(23, 23, 26);
+    color: rgb(255, 254, 254);
+    
+  }
+  #page1{
+    height: 110vh;
+    border-radius: 0 0 6em 6em;
+  }
+  #iconSocial{
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  #iconSocial i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(255, 254, 254);
+  }
+  #page1 #wrap{
+    height: 80vh;
+    border-radius: 0 0 6em 6em;
+  }
+  #profilePic{
+    width:  120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  #profilePic #name{
+    width:  100px;
+    height: 50px;
+    font-size: 0.4em;
+    padding-top: 13%;    
+  }
+  #heading{
+     font-size: 0.6em;
+  }
+  #profile #btn{
+  width: 50vw;
+  height:8vh;
+  }
+  .motion{
+    margin-top: 10vh;
+  }
+  .motion img{
+    width: 50vh;
+    height: auto;
+  }
+  #ppart1 h1{
+    font-size: 1.9em;
+  }
+  #ppart2 p{
+    width: 35vw;
+    height: 8vh;
+    font-size:1em;
+  }
+  #projectss .prj1:hover{
+    width: 55vw;
+    height: 40vh;
+  }
+  #page3{
+    height: 60vh;
+    border-radius: 6em 6em 0 0 ;
+  }
+
+  #page3 h1{
+   font-size: 1.5em;
+  }
+  #page3 #btn{
+   display: flex;
+   gap: 5em;
+   padding-top: 2em;
+  }
+  #btn .sbtn{
+    width: 30vw;
+    height:12vw;
+  }
+}
+
+/* Styles for tablets and small desktops */
+/* @media (min-width: 481px) and (max-width: 1024px) {
+  .container {
+      max-width: 90%;
+      padding: 20px;
+  }
+}  */
+
+
+

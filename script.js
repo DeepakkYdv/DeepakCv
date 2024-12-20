@@ -13,6 +13,12 @@ document.getElementById('copyBtn').addEventListener('click', function() {
   });
   
 
+// resume download
+function downloadCV() {
+    window.location.href = "CV/DeepakResume1.pdf";
+}
+
+
   document.getElementById('redirectToWhatsApp').addEventListener('click', function() {
     // Replace with the desired phone number (include the country code, e.g., 91 for India)
     const phoneNumber = '9693586284'; 

@@ -1,234 +1,1285 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>DeepakkRao</title>
-  </head>
-  <body>
-    <div id="main">
-      <!-- Page1 -->
-      <div id="page1">
-        <!-- Navigation -->
-        <div id="wrap">
-          <div id="nav">
-            <div class="part1">
-              <a href="" id="textToCopy" class="desktop"
-                >deepakk.ydv27@gmail.com</a
-              >
-              <button id="copyBtn" href="" class="sbtn">Copy</button>
-              <a
-                href="CV/DeepakResume1.pdf"
-                download="Deepakk_CV.pdf"
-                class="sbtn"
-                >CV</a
-              >
-            </div>
-            <div class="part11">
-              <a href="" class="sbtn">Email</a>
-              <a href="" class="sbtn">Cv</a>
-            </div>
-            <div class="desktop" class="part2">
-              <a href="https://www.linkedin.com/in/deepak-kumar-64198b1ab/"
-                >LinkedIn</a
-              ><a>/</a><a href="https://Instagram.com/bihariknight">Instagram</a
-              ><a>/</a><a href="https://github.com/DeepakkYdv">Github</a>
-            </div>
-            <div id="iconSocial">
-              <i class="ri-instagram-fill"></i><i class="ri-github-fill"></i
-              ><i class="ri-linkedin-box-fill"></i>
-            </div>
-          </div>
-          <!-- Profile -->
-          <div id="profile">
-            <div id="profilePic">
-              <div id="name">DeepakkRao 👋</div>
-            </div>
-            <div id="heading" class="backgroundIng">
-              <h1>Building modern frontend applications</h1>
-              <h1>with Next.js, focused on performance</h1>
-              <h1>and clean user interfaces.</h1>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Deepak Kumar — Full Stack MERN Developer specializing in Next.js, React, Node.js and MongoDB. Open to remote roles globally." />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <title>Deepak Kumar — Full Stack Developer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 
-            <div id="btn">
-              <p>Latest Shot</p>
-              <i class="ri-arrow-right-up-line"></i>
-            </div>
-          </div>
+    /* ── ORIGINAL FONTS ── */
+    @font-face { font-family: font1; src: url(fonts/font5.woff2); }
+    @font-face { font-family: font2; src: url(fonts/font4.woff2); }
+
+    * { padding: 0; margin: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:       rgb(238, 236, 236);
+      --white:    rgb(255, 255, 255);
+      --dark:     rgb(23, 23, 26);
+      --dark2:    rgb(17, 17, 20);
+      --muted:    rgb(120, 118, 115);
+      --border:   rgba(0,0,0,0.08);
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background-color: var(--bg);
+      scroll-behavior: smooth;
+    }
+
+    a { text-decoration: none; color: black; font-weight: bolder; }
+
+    /* ═══════════════════════════════
+       PAGE 1 — HERO  (your original)
+    ═══════════════════════════════ */
+    #page1 {
+      overflow: hidden;
+      width: auto;
+      height: 140vh;
+      background-color: var(--white);
+      border-radius: 0 0 7em 7em;
+    }
+    #page1 #wrap {
+      width: 100%;
+      height: 100vh;
+      background-color: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0 0 7em 7em;
+    }
+
+    /* NAV */
+    #nav {
+      font-family: font1;
+      width: 100%;
+      font-size: small;
+      padding-top: 3em;
+      padding-left: 5em;
+      padding-right: 5em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #iconSocial, .mobile { display: none; }
+    #nav .part1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 1em;
+    }
+    .part1 .sbtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6vw;
+      height: 3vw;
+      border-radius: 5em;
+      background-color: var(--white);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .part1 .sbtn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+    .part1 a:nth-child(1) { font-family: font2; }
+    #nav .part2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 0.5em;
+    }
+    .part2 a { font-family: font2; }
+
+    /* PROFILE */
+    #profilePic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 10vw;
+      height: 20vh;
+      border-radius: 50%;
+      background-color: rgb(100, 73, 73);
+    }
+    #profile {
+      font-family: font1;
+      font-size: 1.7em;
+      padding-top: 4em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #profilePic {
+      position: relative;
+      border: 2px solid var(--white);
+      background-image: url(profilepic.jpg);
+      background-size: cover;
+      background-position-y: 70%;
+    }
+    #profilePic #name {
+      font-family: font2;
+      color: rgb(61, 61, 61);
+      position: absolute;
+      transform: rotateZ(-10deg);
+      width: 8vw;
+      height: 6vh;
+      text-align: center;
+      padding-top: 9%;
+      border-radius: 5em;
+      left: 80%;
+      font-size: 0.5em;
+      background-color: var(--white);
+      animation: upDown 6s infinite ease-in-out;
+      white-space: nowrap;
+    }
+    @keyframes upDown {
+      0%   { top: 20px; }
+      50%  { top: 60px; }
+      100% { top: 20px; }
+    }
+    #heading {
+      text-align: center;
+      letter-spacing: 2px;
+      padding-top: 1em;
+      padding-bottom: 1.7em;
+    }
+
+    /* ── MASTER CSS (your original) ── */
+    .backgroundIng {
+      background: linear-gradient(to right, black, grey);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    #profile #btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5em;
+      width: 12vw;
+      height: 8vh;
+      color: var(--white);
+      background-color: var(--dark);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #profile #btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.2); }
+    #btn p { font-size: 0.5em; font-family: font2; }
+    #btn i { font-size: 0.7em; font-family: font2; padding-left: 0.4em; }
+
+    /* MARQUEE (your original style, expanded) */
+    #motion-container {
+      width: auto;
+      white-space: nowrap;
+    }
+    .motion {
+      white-space: nowrap;
+      margin-top: 15vh;
+      gap: 6em;
+      width: 400%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      animation: motions 70s linear infinite;
+    }
+    @keyframes motions {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .motion img { width: 10vw; height: auto; }
+    .motion:hover { animation-play-state: paused; transition: 0.25s ease-in-out; }
+
+    /* ══════════════════════════════════
+       PAGE 2 — ABOUT + PROJECTS HEADER
+    ══════════════════════════════════ */
+    #page2 {
+      width: 100%;
+      font-family: font1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    #page2 > p {
+      text-align: center;
+      font-size: 3em;
+      color: rgb(255, 254, 254);
+    }
+    #ppart1 h1 {
+      text-align: center;
+      font-size: 2.3em;
+      padding: 1.5em;
+    }
+    #ppart2 {
+      width: 100%;
+      padding-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #ppart2 .badge {
+      margin-top: -1.8em;
+      transform: rotateZ(-10deg);
+      padding: 0.6em 1.5em;
+      background-color: var(--white);
+      border-radius: 5em;
+      font-size: 0.9em;
+      font-family: font1;
+      color: black;
+    }
+    #ppart2 .line {
+      width: 80vw;
+      height: 0.03rem;
+      background-color: rgb(17, 17, 17);
+      margin-bottom: -2.5em;
+      border-radius: 5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ─── STATS STRIP ─── */
+    .stats-strip {
+      width: 80vw;
+      margin: 3rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .stat-box {
+      background: var(--white);
+      border-radius: 2em;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .stat-box:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .stat-num {
+      font-family: font2;
+      font-size: 2.8rem;
+      font-weight: 900;
+      background: linear-gradient(to right, black, grey);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .stat-lbl {
+      font-family: font1;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── ABOUT STRIP ─── */
+    .about-strip {
+      width: 80vw;
+      margin: 3rem auto 0;
+      background: var(--white);
+      border-radius: 2.5em;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .about-text h2 {
+      font-family: font1;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      font-family: font1;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: rgb(80, 78, 75);
+      margin-bottom: 0.8rem;
+    }
+    .about-right { display: flex; flex-direction: column; gap: 1rem; }
+    .about-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: var(--bg);
+      border-radius: 5em;
+      padding: 0.9rem 1.4rem;
+      font-family: font1;
+      font-size: 0.85rem;
+      color: var(--dark);
+      transition: transform 0.2s;
+    }
+    .about-chip:hover { transform: translateX(6px); }
+    .about-chip i { font-size: 1.1rem; color: var(--dark); }
+
+    /* ═══════════════════════════════
+       PROJECT LIST
+    ═══════════════════════════════ */
+    .project-list { background-color: var(--bg); padding-bottom: 4rem; }
+
+    #projectss {
+      width: 100%;
+      padding-top: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .project-card {
+      display: block;
+      perspective: 1000px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .prj1 {
+      width: 15vw;
+      height: 40vh;
+      border-radius: 2em;
+      background-size: cover;
+      background-position: top center;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    /* project screenshots */
+    .project-1 { background-image: url("Img/Screenshot (9).png");  transform: rotateX(15deg) rotateY(-35deg); }
+    .project-2 { background-image: url("Img/Screenshot (10).png"); transform: rotateX(-15deg) rotateY(-35deg); }
+    .project-3 { background-image: url("Img/Screenshot (11).png"); margin-top: 4rem; }
+    .project-4 { background-image: url("Img/Screenshot (12).png"); transform: rotateX(15deg) rotateY(-35deg); }
+
+    /* gradient placeholders for new projects */
+    .prj-khansir  { background: linear-gradient(140deg,#1a1a1a 0%,#2d2d2d 40%, #111 100%); transform: rotateX(10deg) rotateY(-28deg); }
+    .prj-alliv    { background: linear-gradient(140deg,#13213a 0%,#1e3360 100%); transform: rotateX(-10deg) rotateY(-28deg); }
+    .prj-sabot    { background: linear-gradient(140deg,#0f2e28 0%,#1a4a40 100%); transform: rotateX(10deg) rotateY(-28deg); }
+    .prj-akloan   { background: linear-gradient(140deg,#1e1205 0%,#3a2210 100%); transform: rotateX(-10deg) rotateY(-28deg); }
+    .prj-bugsnap  { background: linear-gradient(140deg,#1e0a0a 0%,#3a1515 100%); transform: rotateX(10deg) rotateY(-28deg); }
+    .prj-sarkari  { background: linear-gradient(140deg,#0d1e38 0%,#1a3060 100%); transform: rotateX(-10deg) rotateY(-28deg); }
+
+    /* floating label on project card */
+    .prj-label {
+      width: 100%;
+      height: 100%;
+      border-radius: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 1.4rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+    }
+    .prj-label .prj-name {
+      font-family: font2;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.95);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .prj-label .prj-stack {
+      font-family: font1;
+      font-size: 0.62rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.2rem;
+    }
+    .prj-status {
+      font-family: font1;
+      font-size: 0.6rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5em;
+      margin-bottom: 0.4rem;
+    }
+    .s-live  { background: rgba(60,220,100,0.18); color: #3ddc64; border: 1px solid rgba(60,220,100,0.3); }
+    .s-wip   { background: rgba(200,180,60,0.15); color: #c4b430; border: 1px solid rgba(200,180,60,0.25); }
+
+    @media (hover: hover) {
+      .project-card:hover .prj1 {
+        transform: rotateX(0) rotateY(0) scale(1.05);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    /* ═══════════════════════════════
+       SKILLS SECTION
+    ═══════════════════════════════ */
+    #skills-section {
+      width: 100%;
+      background: var(--white);
+      border-radius: 7em 7em 0 0;
+      margin-top: 4rem;
+      padding: 5rem 10vw;
+      font-family: font1;
+    }
+    .section-eyebrow {
+      font-family: font1;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+    .section-heading {
+      font-family: font2;
+      font-size: 2.6rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(to right, black, #555);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 3rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .skill-card {
+      background: var(--bg);
+      border-radius: 2em;
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skill-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.07); }
+    .skill-card-title {
+      font-family: font2;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .skill-card-title i { font-size: 1rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      font-family: font1;
+      font-size: 0.78rem;
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 5em;
+      padding: 0.3rem 0.85rem;
+      color: rgb(50,48,46);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .tag:hover { background: var(--dark); color: var(--white); transform: scale(1.04); }
+
+    /* ═══════════════════════════════
+       EXPERIENCE / TIMELINE
+    ═══════════════════════════════ */
+    #exp-section {
+      width: 100%;
+      background: var(--bg);
+      padding: 5rem 10vw;
+      font-family: font1;
+    }
+    .timeline { margin-top: 3rem; position: relative; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 130px;
+      top: 0; bottom: 0;
+      width: 1px;
+      background: rgba(0,0,0,0.1);
+    }
+    .tl-item {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+      position: relative;
+    }
+    .tl-dot {
+      position: absolute;
+      left: 125px;
+      top: 5px;
+      width: 11px; height: 11px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.12);
+    }
+    .tl-date {
+      font-family: font1;
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding-top: 0.2rem;
+      text-align: right;
+      padding-right: 1rem;
+    }
+    .tl-body { padding-left: 1.5rem; }
+    .tl-company {
+      font-family: font2;
+      font-size: 1.15rem;
+      color: var(--dark);
+      margin-bottom: 0.15rem;
+    }
+    .tl-role {
+      font-family: font1;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.7rem;
+    }
+    .tl-desc {
+      font-family: font1;
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: rgb(75,73,70);
+      margin-bottom: 0.8rem;
+    }
+    .tl-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tl-tag {
+      font-size: 0.7rem;
+      font-family: font1;
+      background: rgba(0,0,0,0.06);
+      border-radius: 5em;
+      padding: 0.2rem 0.65rem;
+      color: var(--dark);
+    }
+
+    /* ═══════════════════════════════
+       PAGE 3 — CONTACT (your original style)
+    ═══════════════════════════════ */
+    #page3 {
+      width: 100%;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 0;
+      background-color: var(--white);
+      border-radius: 7em 7em 0 0;
+      padding: 5rem 3rem;
+    }
+    #page3 h1 {
+      padding-top: 1.5em;
+      text-align: center;
+      font-family: font1;
+      font-size: 2.2rem;
+    }
+    #page3 #btn {
+      display: flex;
+      gap: 2rem;
+      padding-top: 2em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #btn .sbtn {
+      font-family: font1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3em;
+      width: 8vw;
+      height: 4vw;
+      border-radius: 5em;
+      font-size: 1.8em;
+      border: 4px solid rgb(235, 233, 233);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    #btn .sbtn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.15); }
+    #btn .sbtn:nth-child(1) {
+      background-color: var(--dark);
+      color: var(--white);
+      border-color: var(--dark);
+    }
+
+    /* social links row */
+    .contact-socials {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .c-soc {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: font1;
+      font-size: 0.82rem;
+      color: var(--muted);
+      background: var(--bg);
+      border-radius: 5em;
+      padding: 0.55rem 1.1rem;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .c-soc:hover { background: var(--dark); color: var(--white); transform: translateY(-2px); }
+    .c-soc i { font-size: 1rem; }
+
+    /* availability badge */
+    .avail-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(50,200,90,0.1);
+      border: 1px solid rgba(50,200,90,0.25);
+      color: rgb(40,160,70);
+      font-family: font1;
+      font-size: 0.78rem;
+      padding: 0.4rem 1rem;
+      border-radius: 5em;
+      margin-bottom: 1rem;
+    }
+    .avail-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: rgb(50,200,90);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(50,200,90,0.4); }
+      50%      { box-shadow: 0 0 0 6px rgba(50,200,90,0); }
+    }
+
+    /* ── FOOTER ── */
+    #footer {
+      background: var(--bg);
+      padding: 2.5rem 5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: font1;
+      font-size: 0.78rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-weight: 400; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--dark); }
+
+    .part11 { display: none; }
+
+    /* ══════════════════
+       REVEAL ANIMATION
+    ══════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1);
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* ════════════════════
+       RESPONSIVE MOBILE
+    ════════════════════ */
+    @media (max-width: 700px) {
+      .desktop { display: none; }
+      #nav .part1 { display: none; }
+      #nav .part11 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+      }
+      .part11 .sbtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18vw;
+        height: 9vw;
+        border-radius: 5em;
+        background-color: var(--white);
+        border: none;
+        cursor: pointer;
+      }
+      .part11 .sbtn:nth-child(1) { background-color: var(--dark); color: var(--white); }
+      #page1 { height: 110vh; border-radius: 0 0 6em 6em; }
+      #iconSocial {
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+      }
+      #iconSocial i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px; height: 30px;
+        border-radius: 50%;
+        background-color: var(--white);
+      }
+      #page1 #wrap { height: 80vh; border-radius: 0 0 6em 6em; }
+      #profilePic { width: 120px; height: 120px; border-radius: 50%; }
+      #profilePic #name { width: 100px; height: 50px; font-size: 0.4em; padding-top: 13%; }
+      #heading { font-size: 0.6em; }
+      #profile #btn { width: 50vw; height: 8vh; }
+      .motion { margin-top: 10vh; }
+      .motion img { width: 50vw; height: auto; }
+      #ppart1 h1 { font-size: 1.9em; }
+      #page3 { height: auto; border-radius: 6em 6em 0 0; }
+      #page3 h1 { font-size: 1.5em; }
+      #page2 h1 { font-size: 1.3em; }
+      #page1 h1 { font-size: 1.5em; }
+      #page3 #btn { gap: 2rem; }
+      #btn .sbtn { width: 30vw; height: 12vw; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .about-strip { grid-template-columns: 1fr; }
+      .timeline::before { display: none; }
+      .tl-item { grid-template-columns: 1fr; gap: 0.4rem; }
+      .tl-dot { display: none; }
+      .tl-body { padding-left: 0; }
+      #skills-section, #exp-section { padding: 4rem 1.5rem; }
+      #footer { padding: 2rem 1.5rem; }
+      #projectss { flex-direction: column; align-items: center; gap: 2.5rem; }
+      .prj1 { width: 80vw; height: 35vh; transform: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="main">
+
+  <!-- ════ PAGE 1 — HERO ════ -->
+  <div id="page1">
+    <div id="wrap">
+
+      <!-- NAV -->
+      <div id="nav">
+        <div class="part1">
+          <a href="" id="textToCopy" class="desktop">deepakk.ydv27@gmail.com</a>
+          <button id="copyBtn" class="sbtn">Copy</button>
+          <a href="CV/DeepakResume1.pdf" download="Deepak_Kumar_CV.pdf" class="sbtn">CV ↓</a>
         </div>
-        <!-- Motion Images -->
-        <div id="motion-container">
-          <div class="motion">
-            <img
-              src="https://framerusercontent.com/images/nPT3My9mYZPzyjp42aeGQACk4p4.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/XFWQcHTyPCmpljR7ttDhwueN9k.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/FeK7mQ25Aj92hjXNE7801ccv4.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/S7Wn9R0XUGbZP76whfsn435N8o.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/9kIk1y3XOCY94YnLwCDU3SSHL0I.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/Pjlzorsbp4GK4U9nqYaPWgkPs.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/nPT3My9mYZPzyjp42aeGQACk4p4.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/XFWQcHTyPCmpljR7ttDhwueN9k.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/FeK7mQ25Aj92hjXNE7801ccv4.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/S7Wn9R0XUGbZP76whfsn435N8o.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/9kIk1y3XOCY94YnLwCDU3SSHL0I.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/Pjlzorsbp4GK4U9nqYaPWgkPs.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/nPT3My9mYZPzyjp42aeGQACk4p4.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/XFWQcHTyPCmpljR7ttDhwueN9k.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/FeK7mQ25Aj92hjXNE7801ccv4.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/S7Wn9R0XUGbZP76whfsn435N8o.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/9kIk1y3XOCY94YnLwCDU3SSHL0I.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/Pjlzorsbp4GK4U9nqYaPWgkPs.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/nPT3My9mYZPzyjp42aeGQACk4p4.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/XFWQcHTyPCmpljR7ttDhwueN9k.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/FeK7mQ25Aj92hjXNE7801ccv4.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/S7Wn9R0XUGbZP76whfsn435N8o.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/9kIk1y3XOCY94YnLwCDU3SSHL0I.svg"
-              alt=""
-            />
-            <img
-              src="https://framerusercontent.com/images/Pjlzorsbp4GK4U9nqYaPWgkPs.svg"
-              alt=""
-            />
-          </div>
+        <div class="part11">
+          <button class="sbtn" id="mobileEmail">Email</button>
+          <a href="CV/DeepakResume1.pdf" download class="sbtn">CV</a>
+        </div>
+        <div class="desktop part2">
+          <a href="https://www.linkedin.com/in/deepak-kumar-64198b1ab/" target="_blank">LinkedIn</a>
+          <a>/</a>
+          <a href="https://Instagram.com/bihariknight" target="_blank">Instagram</a>
+          <a>/</a>
+          <a href="https://github.com/DeepakkYdv" target="_blank">Github</a>
+        </div>
+        <div id="iconSocial">
+          <a href="https://Instagram.com/bihariknight" target="_blank"><i class="ri-instagram-fill"></i></a>
+          <a href="https://github.com/DeepakkYdv" target="_blank"><i class="ri-github-fill"></i></a>
+          <a href="https://www.linkedin.com/in/deepak-kumar-64198b1ab/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
         </div>
       </div>
-      <!-- Page2 -->
-      <div id="page2">
-        <p>Projects</p>
-        <div id="projects">
-          <div id="ppart1" class="backgroundIng">
-            <h1>
-              MERN Developer specializing in Next.js <br />frontend development,
-              building fast, scalable, <br />and user-focused web applications.
-            </h1>
-          </div>
-          <div id="ppart2">
-            <div class="line">
-            <h1 class="badge">Some of My Works</h1></div>
-          </div>
+
+      <!-- PROFILE -->
+      <div id="profile">
+        <div id="profilePic">
+          <div id="name">DeepakkRao 👋</div>
         </div>
-      </div>
-      <div class="project-list">
-        <div id="projectss">
-          <a
-            href="https://deepakkydv.github.io/TalaSnacks/"
-            class="project-card"
-          >
-            <div class="prj1 project-1"></div>
-          </a>
-
-          <a
-            href="https://deepakkrao.github.io/GuestHouseWebsite/"
-            class="project-card"
-          >
-            <div class="prj1 project-2"></div>
-          </a>
-
-          <a
-            href="https://deepakkydv.github.io/CollegeBuddy/"
-            class="project-card"
-          >
-            <div class="prj1 project-3"></div>
-          </a>
-
-          <a href="https://workms-583e7.web.app/" class="project-card">
-            <div class="prj1 project-4"></div>
-          </a>
+        <div id="heading" class="backgroundIng">
+          <h1>Full Stack MERN Developer</h1>
+          <h1>crafting fast, scalable web apps</h1>
+          <h1>with Next.js — open to remote roles.</h1>
         </div>
-      </div>
-      <!-- page3 -->
-      <div id="page3">
-        <div id="profilePic"></div>
-        <h1 class="backgroundIng">
-          Frontend-focused MERN Developer<br />
-          building fast, modern interfaces<br />
-          with Next.js.
-        </h1>
-
         <div id="btn">
-          <div class="sbtn" id="redirectToEmail">
-            <i class="ri-mail-send-fill"></i>
-            <p>Email Me</p>
-          </div>
-          <div class="sbtn" id="redirectToWhatsApp">
-            <i class="ri-whatsapp-line"></i>
-            <p>Whatsapp</p>
-          </div>
+          <p>View Work</p>
+          <i class="ri-arrow-right-up-line"></i>
         </div>
       </div>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- MARQUEE — tech stack scroll -->
+    <div id="motion-container">
+      <div class="motion">
+        <img src="https://framerusercontent.com/images/nPT3My9mYZPzyjp42aeGQACk4p4.svg" alt="Next.js" />
+        <img src="https://framerusercontent.com/images/XFWQcHTyPCmpljR7ttDhwueN9k.svg" alt="React" />
+        <img src="https://framerusercontent.com/images/FeK7mQ25Aj92hjXNE7801ccv4.svg" alt="Node" />
+        <img src="https://framerusercontent.com/images/S7Wn9R0XUGbZP76whfsn435N8o.svg" alt="MongoDB" />
+        <img src="https://framerusercontent.com/images/9kIk1y3XOCY94YnLwCDU3SSHL0I.svg" alt="TypeScript" />
+        <img src="https://framerusercontent.com/images/Pjlzorsbp4GK4U9nqYaPWgkPs.svg" alt="Vercel" />
+        <img src="https://framerusercontent.com/images/nPT3My9mYZPzyjp42aeGQACk4p4.svg" alt="Next.js" />
+        <img src="https://framerusercontent.com/images/XFWQcHTyPCmpljR7ttDhwueN9k.svg" alt="React" />
+        <img src="https://framerusercontent.com/images/FeK7mQ25Aj92hjXNE7801ccv4.svg" alt="Node" />
+        <img src="https://framerusercontent.com/images/S7Wn9R0XUGbZP76whfsn435N8o.svg" alt="MongoDB" />
+        <img src="https://framerusercontent.com/images/9kIk1y3XOCY94YnLwCDU3SSHL0I.svg" alt="TypeScript" />
+        <img src="https://framerusercontent.com/images/Pjlzorsbp4GK4U9nqYaPWgkPs.svg" alt="Vercel" />
+        <img src="https://framerusercontent.com/images/nPT3My9mYZPzyjp42aeGQACk4p4.svg" alt="Next.js" />
+        <img src="https://framerusercontent.com/images/XFWQcHTyPCmpljR7ttDhwueN9k.svg" alt="React" />
+        <img src="https://framerusercontent.com/images/FeK7mQ25Aj92hjXNE7801ccv4.svg" alt="Node" />
+        <img src="https://framerusercontent.com/images/S7Wn9R0XUGbZP76whfsn435N8o.svg" alt="MongoDB" />
+        <img src="https://framerusercontent.com/images/9kIk1y3XOCY94YnLwCDU3SSHL0I.svg" alt="TypeScript" />
+        <img src="https://framerusercontent.com/images/Pjlzorsbp4GK4U9nqYaPWgkPs.svg" alt="Vercel" />
+        <img src="https://framerusercontent.com/images/nPT3My9mYZPzyjp42aeGQACk4p4.svg" alt="Next.js" />
+        <img src="https://framerusercontent.com/images/XFWQcHTyPCmpljR7ttDhwueN9k.svg" alt="React" />
+        <img src="https://framerusercontent.com/images/FeK7mQ25Aj92hjXNE7801ccv4.svg" alt="Node" />
+        <img src="https://framerusercontent.com/images/S7Wn9R0XUGbZP76whfsn435N8o.svg" alt="MongoDB" />
+        <img src="https://framerusercontent.com/images/9kIk1y3XOCY94YnLwCDU3SSHL0I.svg" alt="TypeScript" />
+        <img src="https://framerusercontent.com/images/Pjlzorsbp4GK4U9nqYaPWgkPs.svg" alt="Vercel" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ PAGE 2 — ABOUT + STATS ════ -->
+  <div id="page2">
+    <p>About</p>
+    <div id="projects">
+      <div id="ppart1" class="backgroundIng reveal">
+        <h1>
+          MERN Developer specializing in Next.js<br />
+          frontend development — building fast,<br />
+          scalable, and production-ready web apps.
+        </h1>
+      </div>
+      <div id="ppart2">
+        <div class="line">
+          <h1 class="badge">Deepak Kumar</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+      <div class="stat-box reveal">
+        <div class="stat-num">3+</div>
+        <div class="stat-lbl">Years of Building</div>
+      </div>
+      <div class="stat-box reveal">
+        <div class="stat-num">8+</div>
+        <div class="stat-lbl">Projects Shipped</div>
+      </div>
+      <div class="stat-box reveal">
+        <div class="stat-num">5</div>
+        <div class="stat-lbl">Live Client Sites</div>
+      </div>
+      <div class="stat-box reveal">
+        <div class="stat-num">∞</div>
+        <div class="stat-lbl">Problems Solved</div>
+      </div>
+    </div>
+
+    <!-- ABOUT STRIP -->
+    <div class="about-strip reveal">
+      <div class="about-text">
+        <h2 class="backgroundIng">Who I Am</h2>
+        <p>
+          Self-taught MERN stack developer with a C/C++ background, currently pursuing MCA from IGNOU. I build production-grade web applications with sharp attention to performance and UX.
+        </p>
+        <p>
+          I've shipped real products for real clients — a loan consultancy platform serving Bihar users, government job portals handling high traffic, and full association management platforms with dual-environment CI/CD.
+        </p>
+        <p>
+          Actively targeting <strong>Toptal, Turing, and Wellfound</strong> for high-impact remote engineering roles globally.
+        </p>
+      </div>
+      <div class="about-right">
+        <div class="about-chip"><i class="ri-map-pin-line"></i> Bihar, India — Remote Worldwide</div>
+        <div class="about-chip"><i class="ri-graduation-cap-line"></i> MCA · IGNOU (Sem II ongoing)</div>
+        <div class="about-chip"><i class="ri-code-s-slash-line"></i> MERN Stack · Next.js · TypeScript</div>
+        <div class="about-chip"><i class="ri-sparkling-line"></i> AI Integration · Anthropic SDK</div>
+        <div class="about-chip"><i class="ri-time-line"></i> Available for remote full-time</div>
+        <div class="about-chip"><i class="ri-whatsapp-line"></i> +91 96935 86284</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ PROJECTS ════ -->
+  <div class="project-list">
+    <div id="page2" style="padding-top:3rem;">
+      <p style="color:rgb(80,78,75);">Projects</p>
+      <div id="ppart2" style="padding-top:1rem;">
+        <div class="line"><h1 class="badge">Some of My Works</h1></div>
+      </div>
+    </div>
+
+    <div id="projectss">
+
+      <!-- KhanSirResult -->
+      <a href="https://khansirresult.com" target="_blank" class="project-card reveal">
+        <div class="prj1 prj-khansir">
+          <div class="prj-label">
+            <span class="prj-status s-live">● Live</span>
+            <span class="prj-name">KhanSirResult.com</span>
+            <span class="prj-stack">Next.js · High Traffic</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Alliv Solutions -->
+      <a href="https://app.allivsolutions.com" target="_blank" class="project-card reveal">
+        <div class="prj1 prj-alliv">
+          <div class="prj-label">
+            <span class="prj-status s-live">● Live</span>
+            <span class="prj-name">The Alliv Association</span>
+            <span class="prj-stack">React · Node.js · MongoDB</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- SaboT v2 -->
+      <a href="https://sabotv2.vercel.app" target="_blank" class="project-card reveal">
+        <div class="prj1 prj-sabot">
+          <div class="prj-label">
+            <span class="prj-status s-live">● Live</span>
+            <span class="prj-name">SaboT v2</span>
+            <span class="prj-stack">Next.js · Vercel</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Original projects with screenshots -->
+      <a href="https://deepakkydv.github.io/TalaSnacks/" target="_blank" class="project-card reveal">
+        <div class="prj1 project-1">
+          <div class="prj-label">
+            <span class="prj-status s-live">● Live</span>
+            <span class="prj-name">Tala Snacks</span>
+            <span class="prj-stack">HTML · CSS · JS</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://deepakkrao.github.io/GuestHouseWebsite/" target="_blank" class="project-card reveal">
+        <div class="prj1 project-2">
+          <div class="prj-label">
+            <span class="prj-status s-live">● Live</span>
+            <span class="prj-name">Guest House Website</span>
+            <span class="prj-stack">HTML · CSS · JS</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://akloan.co.in" target="_blank" class="project-card reveal">
+        <div class="prj1 prj-akloan">
+          <div class="prj-label">
+            <span class="prj-status s-live">● Live</span>
+            <span class="prj-name">AK Loan & Insurance</span>
+            <span class="prj-stack">Next.js 14 · TypeScript · CSS Modules</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://deepakkydv.github.io/CollegeBuddy/" target="_blank" class="project-card reveal">
+        <div class="prj1 project-3">
+          <div class="prj-label">
+            <span class="prj-status s-live">● Live</span>
+            <span class="prj-name">CollegeBuddy</span>
+            <span class="prj-stack">React · Firebase</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://workms-583e7.web.app/" target="_blank" class="project-card reveal">
+        <div class="prj1 project-4">
+          <div class="prj-label">
+            <span class="prj-status s-live">● Live</span>
+            <span class="prj-name">WorkMS</span>
+            <span class="prj-stack">React · Firebase</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- BugSnap -->
+      <a href="https://github.com/DeepakkYdv" target="_blank" class="project-card reveal">
+        <div class="prj1 prj-bugsnap">
+          <div class="prj-label">
+            <span class="prj-status s-wip">◑ Beta</span>
+            <span class="prj-name">BugSnap</span>
+            <span class="prj-stack">MERN · Google OAuth · JWT</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Sarkari Setu -->
+      <a href="https://github.com/DeepakkYdv" target="_blank" class="project-card reveal">
+        <div class="prj1 prj-sarkari">
+          <div class="prj-label">
+            <span class="prj-status s-wip">◐ In Dev</span>
+            <span class="prj-name">Sarkari Setu</span>
+            <span class="prj-stack">Next.js 14 · MongoDB Atlas · SSR</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ════ SKILLS ════ -->
+  <div id="skills-section">
+    <div class="section-eyebrow reveal">Tech Stack</div>
+    <div class="section-heading reveal">What I Work With</div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="ri-layout-3-line"></i> Frontend</div>
+        <div class="tags">
+          <span class="tag">React.js</span>
+          <span class="tag">Next.js 14</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">CSS Modules</span>
+          <span class="tag">Framer Motion</span>
+          <span class="tag">React Native</span>
+          <span class="tag">Responsive Design</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="ri-server-line"></i> Backend</div>
+        <div class="tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Mongoose</span>
+          <span class="tag">JWT Auth</span>
+          <span class="tag">Passport.js</span>
+          <span class="tag">Google OAuth</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="ri-tools-line"></i> Tools & DevOps</div>
+        <div class="tags">
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">MongoDB Atlas</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">GoDaddy DNS</span>
+          <span class="tag">Postman</span>
+          <span class="tag">VS Code</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="ri-sparkling-line"></i> AI & Integrations</div>
+        <div class="tags">
+          <span class="tag">Anthropic SDK</span>
+          <span class="tag">Vercel AI SDK</span>
+          <span class="tag">LangChain.js</span>
+          <span class="tag">OpenAI API</span>
+          <span class="tag">SSE Streaming</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="ri-code-box-line"></i> Languages</div>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">C / C++</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="ri-trophy-line"></i> Targeting</div>
+        <div class="tags">
+          <span class="tag">Toptal</span>
+          <span class="tag">Turing</span>
+          <span class="tag">Wellfound</span>
+          <span class="tag">Remote-first roles</span>
+          <span class="tag">SaaS Products</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ EXPERIENCE ════ -->
+  <div id="exp-section">
+    <div class="section-eyebrow reveal">Experience</div>
+    <div class="section-heading reveal">Work History</div>
+
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-date">2024 — Now</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-company">The Alliv Association</div>
+          <div class="tl-role">Full Stack Developer · prod: app.allivsolutions.com · staging: theallivcompany.com</div>
+          <div class="tl-desc">
+            Built and deployed a complete association management platform from scratch. Architected separate production and staging environments with independent CI/CD pipelines. Handled full-stack — React frontend, Node.js REST APIs, MongoDB schema design, and Vercel deployment configuration.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">React</span>
+            <span class="tl-tag">Node.js</span>
+            <span class="tl-tag">MongoDB</span>
+            <span class="tl-tag">Vercel</span>
+            <span class="tl-tag">CI/CD</span>
+            <span class="tl-tag">REST API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-date">2024</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-company">AK Loan & Insurance Consultancy</div>
+          <div class="tl-role">Freelance Full Stack Developer · akloan.co.in</div>
+          <div class="tl-desc">
+            Designed and developed a production-ready Next.js 14 business landing page with TypeScript and CSS Modules. Configured custom domain via GoDaddy DNS → Vercel. Delivered componentized architecture with mobile-first responsive design.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">Next.js 14</span>
+            <span class="tl-tag">TypeScript</span>
+            <span class="tl-tag">CSS Modules</span>
+            <span class="tl-tag">GoDaddy DNS</span>
+            <span class="tl-tag">Vercel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-date">2024</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-company">KhanSirResult.com</div>
+          <div class="tl-role">Developer · High-Traffic Exam Results Portal</div>
+          <div class="tl-desc">
+            Built a high-traffic exam results and education portal for Khan Sir's massive student community. Optimised for SSR performance, real-time data fetching, and mobile-first design targeting Bihar & UP students.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">Next.js</span>
+            <span class="tl-tag">SSR</span>
+            <span class="tl-tag">Performance</span>
+            <span class="tl-tag">Mobile-first</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-date">2023</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-company">Eye Spy Security</div>
+          <div class="tl-role">Freelance Web Developer · CCTV Installation, Hajipur</div>
+          <div class="tl-desc">
+            Business website for a Hajipur-based CCTV installation company. Integrated service listings, contact forms, and local SEO optimisation targeting Bihar market.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">Next.js</span>
+            <span class="tl-tag">Responsive</span>
+            <span class="tl-tag">Local SEO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-date">2021 — Now</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-company">Independent Builder</div>
+          <div class="tl-role">Personal Projects & Open Source</div>
+          <div class="tl-desc">
+            Building SaboT v2, BugSnap (MERN bug tracker), Sarkari Setu (govt job portal), and exploring AI integrations with Anthropic SDK. Continuous DSA practice in C++ and TypeScript — LeetCode-style patterns.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">Next.js 14</span>
+            <span class="tl-tag">MongoDB Atlas</span>
+            <span class="tl-tag">Anthropic SDK</span>
+            <span class="tl-tag">React Native</span>
+            <span class="tl-tag">DSA</span>
+            <span class="tl-tag">C++</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ════ PAGE 3 — CONTACT ════ -->
+  <div id="page3">
+    <div id="profilePic" style="width:10vw;min-width:80px;"></div>
+
+    <div class="avail-badge reveal">
+      <span class="avail-dot"></span>
+      Available for remote roles & freelance
+    </div>
+
+    <h1 class="backgroundIng reveal">
+      Full Stack MERN Developer<br />
+      building fast, modern interfaces<br />
+      with Next.js — let's work together.
+    </h1>
+
+    <div id="btn">
+      <div class="sbtn" id="redirectToEmail">
+        <i class="ri-mail-send-fill"></i>
+        <p>Email Me</p>
+      </div>
+      <div class="sbtn" id="redirectToWhatsApp">
+        <i class="ri-whatsapp-line"></i>
+        <p>WhatsApp</p>
+      </div>
+      <a href="CV/DeepakResume1.pdf" download="Deepak_Kumar_CV.pdf" class="sbtn" style="border:4px solid rgb(235,233,233);font-family:font1;font-size:1.8em;display:flex;align-items:center;justify-content:center;gap:0.3em;width:8vw;min-width:120px;height:4vw;min-height:50px;border-radius:5em;">
+        <i class="ri-download-2-line"></i>
+        <p style="font-size:0.5em;font-family:font2;">Download CV</p>
+      </a>
+    </div>
+
+    <div class="contact-socials reveal">
+      <a href="https://github.com/DeepakkYdv" target="_blank" class="c-soc"><i class="ri-github-fill"></i> DeepakkYdv</a>
+      <a href="https://www.linkedin.com/in/deepak-kumar-64198b1ab/" target="_blank" class="c-soc"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+      <a href="https://Instagram.com/bihariknight" target="_blank" class="c-soc"><i class="ri-instagram-fill"></i> @bihariknight</a>
+      <span class="c-soc" id="copyEmail2" style="cursor:pointer;"><i class="ri-mail-line"></i> deepakk.ydv27@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- ════ FOOTER ════ -->
+  <div id="footer">
+    <span>© 2025 Deepak Kumar · Bihar, India</span>
+    <div class="footer-links">
+      <a href="https://github.com/DeepakkYdv" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/deepak-kumar-64198b1ab/" target="_blank">LinkedIn</a>
+      <a href="mailto:deepakkrao27@outlook.com">Email</a>
+      <a href="CV/DeepakResume1.pdf" download>CV PDF</a>
+    </div>
+  </div>
+
+</div><!-- #main -->
+
+<script>
+  /* ── copy email ── */
+  function copyEmail() {
+    navigator.clipboard.writeText('deepakk.ydv27@gmail.com')
+      .then(() => { alert('Email copied!'); })
+      .catch(() => {});
+  }
+  document.getElementById('copyBtn').addEventListener('click', copyEmail);
+  document.getElementById('copyEmail2').addEventListener('click', copyEmail);
+
+  /* ── WhatsApp ── */
+  document.getElementById('redirectToWhatsApp').addEventListener('click', function() {
+    window.location.href = 'https://wa.me/919693586284?text=' + encodeURIComponent('Hello Deepak! I came across your portfolio and would like to discuss a project/opportunity.');
+  });
+
+  /* ── Email ── */
+  document.getElementById('redirectToEmail').addEventListener('click', function() {
+    window.location.href = 'mailto:deepakkrao27@outlook.com?subject=' + encodeURIComponent('Collaboration Opportunity') + '&body=' + encodeURIComponent('Hi Deepak,\n\nI visited your portfolio and would love to discuss a project with you.\n\nBest,');
+  });
+
+  /* ── Mobile email ── */
+  const me = document.getElementById('mobileEmail');
+  if (me) me.addEventListener('click', function() {
+    window.location.href = 'mailto:deepakkrao27@outlook.com';
+  });
+
+  /* ── Scroll reveal ── */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = (i % 4) * 0.08 + 's';
+    observer.observe(el);
+  });
+
+  /* ── Hero btn → scroll to projects ── */
+  document.getElementById('btn') && document.getElementById('btn').addEventListener('click', function() {
+    document.querySelector('.project-list').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+</body>
 </html>

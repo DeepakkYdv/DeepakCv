@@ -29,6 +29,7 @@
       min-height: 100%;
       background-color: var(--bg);
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     a { text-decoration: none; color: black; font-weight: bolder; }
@@ -38,18 +39,19 @@
     ═══════════════════════════════ */
     #page1 {
       overflow: hidden;
-      width: auto;
-      height: 140vh;
+      width: 100%;
+      min-height: 100vh;
       background-color: var(--white);
       border-radius: 0 0 7em 7em;
     }
     #page1 #wrap {
       width: 100%;
-      height: 100vh;
+      min-height: 90vh;
       background-color: var(--bg);
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 0 1.5rem 2rem;
       border-radius: 0 0 7em 7em;
     }
 
@@ -58,12 +60,18 @@
       font-family: font1;
       width: 100%;
       font-size: small;
-      padding-top: 3em;
-      padding-left: 5em;
-      padding-right: 5em;
+      padding: 1.5rem 3rem 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    #textToCopy {
+      max-width: 280px;
+      display: inline-block;
+      overflow-wrap: anywhere;
+      white-space: normal;
     }
     #iconSocial, .mobile { display: none; }
     #nav .part1 {
@@ -71,19 +79,21 @@
       align-items: center;
       justify-content: center;
       flex-direction: row;
-      gap: 1em;
+      gap: 0.9rem;
+      flex-wrap: wrap;
     }
     .part1 .sbtn {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 6vw;
-      height: 3vw;
+      min-width: 100px;
+      padding: 0.8rem 1.2rem;
       border-radius: 5em;
       background-color: var(--white);
       transition: transform 0.2s, box-shadow 0.2s;
       cursor: pointer;
       border: none;
+      font-size: 0.9rem;
     }
     .part1 .sbtn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
     .part1 a:nth-child(1) { font-family: font2; }
@@ -92,7 +102,8 @@
       align-items: center;
       justify-content: center;
       flex-direction: row;
-      gap: 0.5em;
+      gap: 0.75rem;
+      flex-wrap: wrap;
     }
     .part2 a { font-family: font2; }
 
@@ -101,19 +112,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 10vw;
-      height: 20vh;
+      width: min(170px, 15vw);
+      height: min(170px, 20vh);
       border-radius: 50%;
       background-color: rgb(100, 73, 73);
     }
     #profile {
       font-family: font1;
+      width: min(92vw, 760px);
       font-size: 1.7em;
-      padding-top: 4em;
+      padding-top: 3.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      text-align: center;
     }
     #profilePic {
       position: relative;
@@ -148,6 +161,13 @@
       letter-spacing: 2px;
       padding-top: 1em;
       padding-bottom: 1.7em;
+      width: 100%;
+      max-width: 760px;
+    }
+    #heading h1 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      margin: 0.45rem 0;
+      line-height: 1.2;
     }
 
     /* ── MASTER CSS (your original) ── */
@@ -162,8 +182,8 @@
       align-items: center;
       justify-content: center;
       border-radius: 5em;
-      width: 12vw;
-      height: 8vh;
+      min-width: 180px;
+      padding: 0.95rem 1.5rem;
       color: var(--white);
       background-color: var(--dark);
       cursor: pointer;
@@ -180,7 +200,8 @@
     }
     .motion {
       white-space: nowrap;
-      margin-top: 15vh;
+      margin-top: 7vh;
+      margin-bottom: 8vh;
       gap: 6em;
       width: 400%;
       display: flex;
@@ -677,60 +698,78 @@
     ════════════════════ */
     @media (max-width: 700px) {
       .desktop { display: none; }
+      #nav {
+        padding: 1rem 1.25rem 0;
+        justify-content: space-between;
+        align-items: center;
+      }
       #nav .part1 { display: none; }
       #nav .part11 {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1em;
+        gap: 0.85rem;
+        flex-wrap: wrap;
+        width: 100%;
       }
       .part11 .sbtn {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 18vw;
-        height: 9vw;
+        min-width: 130px;
+        padding: 0.9rem 1.2rem;
         border-radius: 5em;
         background-color: var(--white);
         border: none;
         cursor: pointer;
+        font-size: 0.95rem;
       }
       .part11 .sbtn:nth-child(1) { background-color: var(--dark); color: var(--white); }
-      #page1 { height: 110vh; border-radius: 0 0 6em 6em; }
+      #page1 {
+        min-height: 100vh;
+        border-radius: 0 0 4em 4em;
+      }
       #iconSocial {
-        font-size: 1.5em;
+        font-size: 1.4em;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1em;
+        gap: 0.75rem;
+        width: 100%;
+        padding: 0.75rem 0;
       }
       #iconSocial i {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 30px; height: 30px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         background-color: var(--white);
       }
-      #page1 #wrap { height: 80vh; border-radius: 0 0 6em 6em; }
-      #profilePic { width: 120px; height: 120px; border-radius: 50%; }
-      #profilePic #name { width: 100px; height: 50px; font-size: 0.4em; padding-top: 13%; }
-      #heading { font-size: 0.6em; }
-      #profile #btn { width: 50vw; height: 8vh; }
-      .motion { margin-top: 10vh; }
-      .motion img { width: 50vw; height: auto; }
-      #ppart1 h1 { font-size: 1.9em; }
-      #page3 { height: auto; border-radius: 6em 6em 0 0; }
+      #page1 #wrap {
+        min-height: auto;
+        border-radius: 0 0 4em 4em;
+      }
+      #profilePic { width: 120px; height: 120px; }
+      #profilePic #name { width: 100px; height: 50px; font-size: 0.44em; padding-top: 12%; }
+      #heading { letter-spacing: 1px; }
+      #heading h1 { font-size: clamp(1.3rem, 7vw, 2rem); }
+      #profile #btn { width: 100%; max-width: 320px; padding: 0.9rem 1.4rem; }
+      .motion { margin-top: 3.5rem; }
+      .motion img { width: clamp(80px, 16vw, 110px); }
+      #ppart1 h1 { font-size: 1.8rem; }
+      #page3 { min-height: auto; border-radius: 6em 6em 0 0; }
       #page3 h1 { font-size: 1.5em; }
       #page2 h1 { font-size: 1.3em; }
       #page1 h1 { font-size: 1.5em; }
-      #page3 #btn { gap: 2rem; }
-      #btn .sbtn { width: 30vw; height: 12vw; }
+      #page3 #btn { gap: 1.5rem; }
+      #btn .sbtn { width: 42vw; height: auto; padding: 1rem 1.2rem; }
       .skills-grid { grid-template-columns: 1fr; }
       .stats-strip { grid-template-columns: 1fr 1fr; }
       .about-strip { grid-template-columns: 1fr; }
       .timeline::before { display: none; }
-      .tl-item { grid-template-columns: 1fr; gap: 0.4rem; }
+      .tl-item { grid-template-columns: 1fr; gap: 0.8rem; }
       .tl-dot { display: none; }
       .tl-body { padding-left: 0; }
       #skills-section, #exp-section { padding: 4rem 1.5rem; }
@@ -842,7 +881,7 @@
     <!-- STATS STRIP -->
     <div class="stats-strip">
       <div class="stat-box reveal">
-        <div class="stat-num">3+</div>
+        <div class="stat-num">2+</div>
         <div class="stat-lbl">Years of Building</div>
       </div>
       <div class="stat-box reveal">
@@ -1106,7 +1145,23 @@
           </div>
         </div>
       </div>
-
+      <div class="tl-item reveal">
+        <div class="tl-date">2025 — Now</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-company">KhanSirResult.com</div>
+          <div class="tl-role">Developer · High-Traffic Exam Results Portal</div>
+          <div class="tl-desc">
+            Built a high-traffic exam results and education portal for Khan Sir's massive student community. Optimised for SSR performance, real-time data fetching, and mobile-first design targeting Bihar & UP students.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">Next.js</span>
+            <span class="tl-tag">SSR</span>
+            <span class="tl-tag">Performance</span>
+            <span class="tl-tag">Mobile-first</span>
+          </div>
+        </div>
+      </div>
       <div class="tl-item reveal">
         <div class="tl-date">2026</div>
         <div class="tl-dot"></div>
@@ -1126,23 +1181,7 @@
         </div>
       </div>
 
-      <div class="tl-item reveal">
-        <div class="tl-date">2025 — Now</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-company">KhanSirResult.com</div>
-          <div class="tl-role">Developer · High-Traffic Exam Results Portal</div>
-          <div class="tl-desc">
-            Built a high-traffic exam results and education portal for Khan Sir's massive student community. Optimised for SSR performance, real-time data fetching, and mobile-first design targeting Bihar & UP students.
-          </div>
-          <div class="tl-tags">
-            <span class="tl-tag">Next.js</span>
-            <span class="tl-tag">SSR</span>
-            <span class="tl-tag">Performance</span>
-            <span class="tl-tag">Mobile-first</span>
-          </div>
-        </div>
-      </div>
+
 
       <div class="tl-item reveal">
         <div class="tl-date">2025</div>

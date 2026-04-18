@@ -255,53 +255,124 @@ a {
 #projectss {
   width: 100%;
   padding-top: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap; /* IMPORTANT */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.project-list {
+  width: 100%;
+  background-color: rgba(255,255,255,0.95);
+  padding: 3rem 1.5rem 2rem;
+  border-radius: 3rem 3rem 1.5rem 1.5rem;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.08);
+}
+
+.project-list > #page2 p {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-weight: 700;
+  color: rgb(88,86,82);
+}
+
+.project-list .badge {
+  font-size: 1.1rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  background-color: rgb(23,23,26);
+  color: #fff;
+  letter-spacing: 0.02em;
 }
 
 .project-card {
   display: block;
-  perspective: 1000px;
+  width: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.16);
+}
+
 .prj1 {
-  width: 15vw;
-  height: 40vh;
-  border-radius: 2em;
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  border-radius: 2rem;
   background-size: cover;
   background-position: center;
-  transform-style: preserve-3d;
-  transition:
-    transform 0.5s ease,
-    box-shadow 0.5s ease;
-}
-.project-1 {
-  background-image: url("Img/Screenshot (9).png");
-  transform: rotateX(15deg) rotateY(-35deg);
+  position: relative;
 }
 
-.project-2 {
-  background-image: url("Img/Screenshot (10).png");
-  transform: rotateX(-15deg) rotateY(-35deg);
+.prj1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.75) 100%);
+  pointer-events: none;
+  border-radius: inherit;
 }
 
-.project-3 {
-  background-image: url("Img/Screenshot (11).png");
-  margin-top: 4rem;
+.prj1 > .prj-label {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-.project-4 {
-  background-image: url("Img/Screenshot (12).png");
-  transform: rotateX(15deg) rotateY(-35deg);
+.prj-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.38);
 }
-@media (hover: hover) {
-  .project-card:hover .prj1 {
-    transform: rotateX(0) rotateY(0) scale(1.05);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
-  }
+
+.s-live { color: #b7f2b0; }
+.s-wip { color: #ffe48f; }
+
+.prj-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
+
+.prj-stack {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.92);
+  max-width: 85%;
+  line-height: 1.5;
+}
+
+.prj-khansir { background-image: linear-gradient(135deg, #0f172a 0%, #3b82f6 100%); }
+.prj-alliv { background-image: linear-gradient(135deg, #111827 0%, #10b981 100%); }
+.prj-sabot  { background-image: linear-gradient(135deg, #1f2937 0%, #f97316 100%); }
+.prj-akloan { background-image: linear-gradient(135deg, #111827 0%, #8b5cf6 100%); }
+.prj-bugsnap { background-image: linear-gradient(135deg, #0f172a 0%, #ef4444 100%); }
+.prj-sarkari { background-image: linear-gradient(135deg, #16213e 0%, #22c55e 100%); }
+
+.project-1 { background-image: url("Img/Screenshot (9).png"); }
+.project-2 { background-image: url("Img/Screenshot (10).png"); }
+.project-3 { background-image: url("Img/Screenshot (11).png"); }
+.project-4 { background-image: url("Img/Screenshot (12).png"); }
 @media (max-width: 700px) {
   #page2 {
     /* height: 90vh; */
@@ -309,14 +380,12 @@ a {
     /* background-color: rgb(23, 23, 26); */
   }
   #projectss {
-    flex-direction: column;
-    gap: 2.5rem;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: stretch;
   }
   .prj1 {
-    width: 80vw;
-    height: 35vh;
-    transform: none !important;
+    min-height: 320px;
   }
 }
 
